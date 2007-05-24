@@ -1,5 +1,5 @@
 #
-Summary:	tiny GNOME tasklist app
+Summary:	Tiny GNOME tasklist application
 Name:		tasks
 Version:	0.6
 Release:	1
