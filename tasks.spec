@@ -55,12 +55,8 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %post
-#%gconf_schema_install tasks.schemas
 %scrollkeeper_update_post
 %update_icon_cache hicolor
-
-%preun
-#%gconf_schema_uninstall tasks.schemas
 
 %postun
 %update_icon_cache hicolor
@@ -70,7 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-#%{_sysconfdir}/gconf/schemas/tasks.schemas
 %{_desktopdir}/tasks.desktop
 %{_iconsdir}/hicolor/48x48/apps/tasks.png
 %{_iconsdir}/hicolor/16x16/apps/tasks.png
