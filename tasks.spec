@@ -1,5 +1,5 @@
-#
 Summary:	Tiny GNOME tasklist application
+Summary(pl.UTF-8):	Mała aplikacja listy zadań dla GNOME
 Name:		tasks
 Version:	0.6
 Release:	1
@@ -16,6 +16,7 @@ BuildRequires:	libglade2-devel >= 1:2.6.0
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.27
 Requires(post,postun):	hicolor-icon-theme
+Requires(post,postun):	scrollkeeper
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,6 +26,13 @@ right thing. It has a simple interface with little cruft around the
 list of tasks, is ported to the OpenMoko framework, and there are
 plans for focused ports to other frameworks (such as Maemo as used on
 the Nokia N800).
+
+%description -l pl.UTF-8
+Tasks to mała aplikacja listy zadań, w której zrezygnowano z bardziej
+złożonych możliwości dla skromnego interfejsu i funkcjonalności
+robiącej to co trzeba. Ma prosty interfejs z małymi sztuczkami przy
+liście zadań, jest portowany do środowiska OpenMoko i są plany portów
+na inne platformy (takie jak Maemo używane na Nokii N800).
 
 %prep
 %setup -q
@@ -66,14 +74,32 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
+%dir %{_datadir}/tasks
+%{_datadir}/tasks/tasks-ui.xml
 %{_desktopdir}/tasks.desktop
-%{_iconsdir}/hicolor/48x48/apps/tasks.png
 %{_iconsdir}/hicolor/16x16/apps/tasks.png
 %{_iconsdir}/hicolor/16x16/apps/tasks.svg
 %{_iconsdir}/hicolor/22x22/apps/tasks.png
 %{_iconsdir}/hicolor/22x22/apps/tasks.svg
 %{_iconsdir}/hicolor/32x32/apps/tasks.png
 %{_iconsdir}/hicolor/32x32/apps/tasks.svg
+%{_iconsdir}/hicolor/48x48/apps/tasks.png
 %{_iconsdir}/hicolor/scalable/apps/tasks.svg
-%dir %{_datadir}/tasks
-%{_datadir}/tasks/tasks-ui.xml
+
+%changelog
+* %{date} PLD Team <feedback@pld-linux.org>
+All persons listed below can be reached at <cvs_login>@pld-linux.org
+
+$Log: tasks.spec,v $
+Revision 1.4  2007-05-25 20:20:28  qboosh
+- pl
+- more deps
+
+Revision 1.3  2007/05/24 07:37:42  ankry
+- cosmetics
+
+Revision 1.2  2007/05/24 03:24:50  aredridel
+- remove all hints of .schemas files
+
+Revision 1.1  2007/05/24 03:22:38  aredridel
+- added
