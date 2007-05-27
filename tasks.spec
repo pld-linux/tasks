@@ -85,21 +85,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/32x32/apps/tasks.svg
 %{_iconsdir}/hicolor/48x48/apps/tasks.png
 %{_iconsdir}/hicolor/scalable/apps/tasks.svg
-
-%changelog
-* %{date} PLD Team <feedback@pld-linux.org>
-All persons listed below can be reached at <cvs_login>@pld-linux.org
-
-$Log: tasks.spec,v $
-Revision 1.4  2007-05-25 20:20:28  qboosh
-- pl
-- more deps
-
-Revision 1.3  2007/05/24 07:37:42  ankry
-- cosmetics
-
-Revision 1.2  2007/05/24 03:24:50  aredridel
-- remove all hints of .schemas files
-
-Revision 1.1  2007/05/24 03:22:38  aredridel
-- added
