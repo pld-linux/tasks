@@ -8,13 +8,16 @@ Group:		Applications/Communications
 Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
 # Source0-md5:	8d10fa8329d2d17c733fb37200b8852e
 URL:		http://pimlico-project.org/tasks.html
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
-BuildRequires:	evolution-data-server-devel
+BuildRequires:	evolution-data-server-devel >= 1.2
 BuildRequires:	gtk+2-devel >= 2:2.10.7
+BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libglade2-devel >= 1:2.6.0
+BuildRequires:	libsexy-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.27
+BuildRequires:	pkgconfig
 Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	scrollkeeper
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
