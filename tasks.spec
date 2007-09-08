@@ -1,12 +1,12 @@
 Summary:	Tiny GNOME tasklist application
 Summary(pl.UTF-8):	Mała aplikacja listy zadań dla GNOME
 Name:		tasks
-Version:	0.9
+Version:	0.11
 Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
-# Source0-md5:	60a22eea33ee4ae00b064f7fad816121
+# Source0-md5:	9055ac3d6e59118958acbde7bdc407c1
 URL:		http://pimlico-project.org/tasks.html
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -80,11 +80,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/tasks
 %{_datadir}/tasks/tasks-ui.xml
 %{_desktopdir}/tasks.desktop
-%{_iconsdir}/hicolor/16x16/apps/tasks.png
-%{_iconsdir}/hicolor/16x16/apps/tasks.svg
-%{_iconsdir}/hicolor/22x22/apps/tasks.png
-%{_iconsdir}/hicolor/22x22/apps/tasks.svg
-%{_iconsdir}/hicolor/32x32/apps/tasks.png
-%{_iconsdir}/hicolor/32x32/apps/tasks.svg
-%{_iconsdir}/hicolor/48x48/apps/tasks.png
+%{_iconsdir}/hicolor/*/apps/tasks.png
 %{_iconsdir}/hicolor/scalable/apps/tasks.svg
