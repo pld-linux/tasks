@@ -1,12 +1,12 @@
 Summary:	Tiny GNOME tasklist application
 Summary(pl.UTF-8):	Mała aplikacja listy zadań dla GNOME
 Name:		tasks
-Version:	0.11
+Version:	0.12
 Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
-# Source0-md5:	9055ac3d6e59118958acbde7bdc407c1
+# Source0-md5:	a2926370099899e578082702328e55ee
 URL:		http://pimlico-project.org/tasks.html
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
