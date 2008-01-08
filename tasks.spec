@@ -2,7 +2,7 @@ Summary:	Tiny GNOME tasklist application
 Summary(pl.UTF-8):	Mała aplikacja listy zadań dla GNOME
 Name:		tasks
 Version:	0.13
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
@@ -61,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 %find_lang %{name} --with-gnome --all-name
+
+# weird unsupported dimension
+rm -rf $RPM_BUILD_ROOT%{_iconsdir}/hicolor/26x26
 
 %clean
 rm -rf $RPM_BUILD_ROOT
