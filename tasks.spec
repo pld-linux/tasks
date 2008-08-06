@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Communications
 Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
 # Source0-md5:	536ffbbd0f38489c8e3ea9eaf0f67d59
+Patch0:		%{name}-configure.patch
 URL:		http://pimlico-project.org/tasks.html
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -39,6 +40,7 @@ na inne platformy (takie jak Maemo używane na Nokii N800).
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__glib_gettextize}
