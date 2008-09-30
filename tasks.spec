@@ -16,7 +16,8 @@ BuildRequires:	glib2-devel >= 1:2.14
 BuildRequires:	gtk+2-devel >= 2:2.10.7
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libsexy-devel >= 0.1.12
+# not released yet; earlier versions are not used
+#BuildRequires:	libsexy-devel >= 0.1.12
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.27
 BuildRequires:	pkgconfig
@@ -51,8 +52,7 @@ na inne platformy (takie jak Maemo używane na Nokii N800).
 %{__autoheader}
 %{__automake}
 %{__autoconf}
-%configure \
-	--disable-scrollkeeper
+%configure
 %{__make}
 
 %install
