@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Mała aplikacja listy zadań dla GNOME
 Name:		tasks
 Version:	0.14
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Applications/Communications
 Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
 # Source0-md5:	a925fda89359d6443029022e43cba1bd
@@ -12,10 +12,11 @@ URL:		http://pimlico-project.org/tasks.html
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	evolution-data-server-devel >= 1.2
+BuildRequires:	glib2-devel >= 1:2.14
 BuildRequires:	gtk+2-devel >= 2:2.10.7
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libsexy-devel
+BuildRequires:	libsexy-devel >= 0.1.12
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.27
 BuildRequires:	pkgconfig
@@ -51,7 +52,6 @@ na inne platformy (takie jak Maemo używane na Nokii N800).
 %{__automake}
 %{__autoconf}
 %configure \
-	--disable-schemas-install \
 	--disable-scrollkeeper
 %{__make}
 
@@ -59,10 +59,9 @@ na inne platformy (takie jak Maemo używane na Nokii N800).
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang %{name} --with-gnome --all-name
+%find_lang %{name}
 
 # weird unsupported dimension
 rm -rf $RPM_BUILD_ROOT%{_iconsdir}/hicolor/26x26
@@ -81,9 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_bindir}/*
-##%dir %{_datadir}/tasks
-##%{_datadir}/tasks/tasks-ui.xml
+%attr(755,root,root) %{_bindir}/tasks
 %{_desktopdir}/tasks.desktop
 %{_iconsdir}/hicolor/*/apps/tasks.png
 %{_iconsdir}/hicolor/scalable/apps/tasks.svg
