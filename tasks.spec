@@ -2,7 +2,7 @@ Summary:	Tiny GNOME tasklist application
 Summary(pl.UTF-8):	Mała aplikacja listy zadań dla GNOME
 Name:		tasks
 Version:	0.20
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Communications
 Source0:	http://download.gnome.org/sources/tasks/0.20/%{name}-%{version}.tar.xz
