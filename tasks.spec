@@ -12,7 +12,7 @@ URL:		http://pimlico-project.org/tasks.html
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	evolution-data-server-devel >= 1.2
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.14
 BuildRequires:	gnome-common
 BuildRequires:	gtk+2-devel >= 2:2.10.7
